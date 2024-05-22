@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Wordle">
+    <meta property="og:image" content="./wordle.png">
+    <meta property="og:description" content="아미넴">
+    <link rel="stylesheet" href="./wordle.css">
+</head>
+<body>
+    <h1>WORDLE</h1>
+    <div class="wrap game-board"></div>
+    <button class="wrap try-btn" onclick="guess()" disabled></button>
+    <div class="wrap key-board">
+        <div class="key-line">
+            <button class="key" id="q">Q</button>
+            <button class="key" id="w">W</button>
+            <button class="key" id="e">E</button>
+            <button class="key" id="r">R</button>
+            <button class="key" id="t">T</button>
+            <button class="key" id="y">Y</button>
+            <button class="key" id="u">U</button>
+            <button class="key" id="i">I</button>
+            <button class="key" id="o">O</button>
+            <button class="key" id="p">P</button>
+        </div>
+        <div class="key-line">
+            <button class="key" id="a">A</button>
+            <button class="key" id="s">S</button>
+            <button class="key" id="d">D</button>
+            <button class="key" id="f">F</button>
+            <button class="key" id="g">G</button>
+            <button class="key" id="h">H</button>
+            <button class="key" id="j">J</button>
+            <button class="key" id="k">K</button>
+            <button class="key" id="l">L</button>
+        </div>
+        <div class="key-line">
+            <button class="key" id="z">Z</button>
+            <button class="key" id="x">X</button>
+            <button class="key" id="c">C</button>
+            <button class="key" id="v">V</button>
+            <button class="key" id="b">B</button>
+            <button class="key" id="n">N</button>
+            <button class="key" id="m">M</button>
+        </div>
+    </div>
+    <script src="./wordle.js"></script>
+</body>
+</html>

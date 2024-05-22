@@ -1,0 +1,154 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+.wrap {
+  margin: 1vw auto 0px;
+  max-width: 400px;
+  width: 90vw;
+}
+h1 {
+  font-size: min(10vw, 3em);
+  text-align: center;
+}
+.round {
+  height: 0px;
+  opacity: 0;
+  display: none;
+  justify-content: space-between;
+  margin-bottom: 3%;
+}
+.round.active {
+  display: flex;
+  animation-fill-mode: forwards;
+  animation-name: slidein, fadein;
+  animation-delay: 0s, 0.3s;
+  animation-duration: 1s, 1s;
+}
+.char {
+  padding: 0px;
+  max-width: 70px;
+  max-height: 70px;
+  width: 16vw;
+  height: 16vw;
+  text-align: center;
+  font-size: min(12vw, 3.2em);
+  font-weight: bold;
+  border: 1px solid transparent;
+  background-color: #f3f3f3;
+  caret-color: transparent;
+}
+.char:not(:last-child) {
+  margin-right: 1%;
+}
+.char:focus {
+  outline: none !important;
+  box-shadow: 0 0 5px #aaaaaa;
+  background-color: #eeeeee;
+}
+.try-btn {
+  display: block;
+  bottom: 0px;
+  padding: 0px;
+  border: 1px solid transparent;
+  max-height: 70px;
+  height: 16vw;
+  background-color: #eeeeee;
+  font-weight: bold;
+  font-size: min(4vw, 1.3em);
+  cursor: pointer;
+}
+.try-btn:focus {
+  outline: none !important;
+  box-shadow: 0 0 5px #999999;
+  background-color: #cccccc;
+}
+.try-btn:disabled {
+  background-color: #efefef;
+}
+.key {
+  padding: 0px;
+  max-width: 34px;
+  max-height: 34px;
+  width: 7vw;
+  height: 7vw;
+  text-align: center;
+  font-size: min(4vw, 1em);
+  font-weight: bold;
+  border: 1px solid transparent;
+  background-color: #f3f3f3;
+  cursor: pointer;
+  margin-bottom: 1vw;
+}
+.key-line {
+  margin: 0px auto;
+  text-align: center;
+  max-height: 10vw;
+}
+.key-board {
+  bottom: 0px;
+  padding: 0px;
+  border: 1px solid transparent;
+}
+.rotate-gray {
+  animation-fill-mode: forwards;
+  animation-name: rotate, turn-gray;
+  animation-delay: 0s, 0.5s;
+  animation-duration: 1s, 0.5s;
+}
+.rotate-yellow {
+  animation-fill-mode: forwards;
+  animation-name: rotate, turn-yellow;
+  animation-delay: 0s, 0.5s;
+  animation-duration: 1s, 0.5s;
+}
+.rotate-green {
+  animation-fill-mode: forwards;
+  animation-name: rotate, turn-green;
+  animation-delay: 0s, 0.5s;
+  animation-duration: 1s, 0.5s;
+}
+.press {
+  animation: press 1s;
+}
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  50% {
+    color: transparent;
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes press {
+  to {
+    transform: rotateX(360deg);
+  }
+}
+@keyframes turn-gray {
+  to {
+    background-color: gray;
+    color: white;
+  }
+}
+@keyframes turn-yellow {
+  to {
+    background-color: yellow;
+  }
+}
+@keyframes turn-green {
+  to {
+    background-color: green;
+    color: white;
+  }
+}
+@keyframes slidein {
+  to {
+    max-height: 70px;
+    height: 16vw;
+  }
+}
